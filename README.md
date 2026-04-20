@@ -17,6 +17,7 @@ Instead of relying on keyword-based search, it uses embeddings and LLMs to retur
 ## Why I built this
 
 Healthcare documents are often:
+
 - long and unstructured  
 - difficult to search efficiently  
 - time-consuming to review manually  
@@ -40,22 +41,12 @@ This project focuses on improving retrieval quality and reducing manual effort.
 ## Impact
 
 - ~35% improvement in retrieval relevance  
-- ~60% reduction in manual review time  
+- ~60% reduction in manual document review time  
 - Supports real-time question answering over healthcare data  
 
 ---
 
 ## Architecture
-User Query
-↓
-Streamlit UI
-↓
-LangChain Pipeline
-↓
-OpenAI Embeddings
-↓
-Pinecone Vector DB
-↓
-Relevant Context Retrieval
-↓
-LLM Response
+
+```text
+User Query → Streamlit UI → LangChain Pipeline → OpenAI Embeddings → Pinecone Vector DB → Relevant Context Retrieval → LLM Response
