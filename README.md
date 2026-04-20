@@ -1,85 +1,61 @@
-# Healthcare RAG Assistant
+# 🩺 Healthcare RAG Assistant
 
-This project is an end-to-end Retrieval-Augmented Generation (RAG) system built to improve how healthcare documents are searched and understood.
+→ Improves healthcare document retrieval using LLMs  
+→ Reduces manual review time by ~60%  
+→ Built with OpenAI, Pinecone, LangChain, and Streamlit  
 
-Instead of relying on keyword search, this system uses embeddings and LLMs to return context-aware answers from large healthcare datasets.
+---
+
+## Overview
+
+This project is an end-to-end Retrieval-Augmented Generation (RAG) system designed to make healthcare documents easier to search and understand.
+
+Instead of relying on keyword-based search, it uses embeddings and LLMs to return context-aware, relevant answers from clinical text.
 
 ---
 
 ## Why I built this
 
-In healthcare workflows, documents like clinical notes, policies, and reports are:
-- long
-- unstructured
-- hard to search efficiently
+Healthcare documents are often:
+- long and unstructured  
+- difficult to search efficiently  
+- time-consuming to review manually  
 
-Traditional search often misses context, which leads to time-consuming manual review.
+Traditional search systems miss context, which slows down decision-making.
 
-I wanted to build a system that can:
-- understand the meaning of queries  
-- retrieve the right context  
-- generate useful answers quickly  
+This project focuses on improving retrieval quality and reducing manual effort.
 
 ---
 
-## What this project does
+## What it does
 
 - Converts healthcare documents into embeddings  
-- Stores them in a vector database (Pinecone)  
+- Stores them in Pinecone (vector database)  
 - Retrieves relevant chunks based on user queries  
-- Uses an LLM (OpenAI) to generate answers using that context  
+- Uses an LLM to generate context-aware answers  
 - Provides a simple Streamlit UI for interaction  
 
 ---
 
 ## Impact
 
-From testing and iteration:
-
 - ~35% improvement in retrieval relevance  
-- ~60% reduction in manual document review time  
-- Handles real-time query + response workflow  
+- ~60% reduction in manual review time  
+- Supports real-time question answering over healthcare data  
 
 ---
 
-## Tech used
-
-- Python  
-- OpenAI (embeddings + LLM)  
-- LangChain  
-- Pinecone (vector DB)  
-- Streamlit  
-- Pandas / basic preprocessing  
-
----
-
-## How it works (simple flow)
-
-1. Clean and split documents into chunks  
-2. Convert chunks into embeddings  
-3. Store embeddings in Pinecone  
-4. User enters a query  
-5. Retrieve most relevant chunks  
-6. Pass context + query to LLM  
-7. Return generated answer  
-
----
-
-## Demo
-
-![App UI](screenshots/ui.png)
-
-Simple interface where you can ask questions and get contextual answers from the document set.
-
----
-
-## Running locally
-
-```bash
-git clone https://github.com/jahnavi-medikonda/healthcare-rag-assistant.git
-cd healthcare-rag-assistant
-
-python3.11 -m venv venv
-source venv/bin/activate
-
-pip install -r requirements.txt
+## Architecture
+User Query
+↓
+Streamlit UI
+↓
+LangChain Pipeline
+↓
+OpenAI Embeddings
+↓
+Pinecone Vector DB
+↓
+Relevant Context Retrieval
+↓
+LLM Response
