@@ -33,8 +33,19 @@ This project focuses on improving retrieval quality and reducing manual effort.
 - Converts healthcare documents into embeddings  
 - Stores them in Pinecone (vector database)  
 - Retrieves relevant chunks based on user queries  
-- Uses an LLM to generate context-aware answers  
+- Uses retrieval-augmented generation (RAG) pipelines to generate grounded responses using semantically retrieved clinical context. 
 - Provides a simple Streamlit UI for interaction  
+
+---
+
+## Retrieval & Relevance Optimization
+
+- Semantic vector retrieval using embeddings
+- Top-K similarity search optimization
+- Retrieval relevance tuning
+- Chunk-size and overlap experimentation
+- Grounded response generation
+- Retrieval validation workflows
 
 ---
 
